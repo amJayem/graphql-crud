@@ -30,6 +30,7 @@ exports.typeDefs = gql`
   type Mutation {
     addProduct(input: AddProduct!): Products
     updateProduct(input: UpdateProduct!): Products
+    deleteProduct(id: ID!): Products
   }
 
   input AddProduct {
