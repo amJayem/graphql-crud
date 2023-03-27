@@ -1,4 +1,4 @@
-const { gql } = require("apollo-server");
+const { gql } = require('apollo-server')
 
 exports.typeDefs = gql`
   type Query {
@@ -27,13 +27,20 @@ exports.typeDefs = gql`
     productId: ID!
   }
 
-  type Mutation{
+  type Mutation {
     addProduct(input: AddProduct!): Products
+    updateProduct(input: UpdateProduct!): Products
   }
 
-  input AddProduct{
+  input AddProduct {
     name: String!
     price: Float!
     onSale: Boolean!
   }
-`;
+
+  input UpdateProduct {
+    id: ID!
+    newProductName: String!
+    newProductPrice: Int!
+  }
+`
