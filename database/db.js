@@ -5,7 +5,8 @@ const products = [
     description: 'Silver steel pot that is perfect for cooking',
     quantity: 230,
     price: 42.44,
-    image: 'img-1',
+    image:
+      'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/7/26/0/FN_istock_stainless-steel-pots_s4x3.jpg.rend.hgtvcom.616.462.suffix/1469599520916.jpeg',
     onSale: false,
     categoryId: '1'
   },
@@ -15,7 +16,8 @@ const products = [
     description: 'Round wooden bowl perfect for tossing and making salads',
     quantity: 33,
     price: 53.5,
-    image: 'img-2',
+    image:
+      'https://img.taste.com.au/sQvzwu00/taste/2018/09/mexican-141430-2.jpg',
     onSale: false,
     categoryId: '1'
   },
@@ -25,7 +27,8 @@ const products = [
     description: 'Small and delicate spoon',
     quantity: 4266,
     price: 1.33,
-    image: 'img-3',
+    image:
+      'https://assets.epicurious.com/photos/600b290984cb202391231bd0/5:4/w_3781,h_3025,c_limit/GoodSpoons_HERO_011421_7459_VOG_final.jpg',
     onSale: true,
     categoryId: '1'
   },
@@ -35,7 +38,8 @@ const products = [
     description: 'Grey rounded shovel for digging',
     quantity: 753,
     price: 332,
-    image: 'img-4',
+    image:
+      'https://cdn11.bigcommerce.com/s-3c8l9ljcjn/product_images/uploaded_images/may-blogthumbnails-shovelsspades.jpg',
     onSale: false,
     categoryId: '2'
   },
@@ -45,7 +49,8 @@ const products = [
     description: 'Nitrogen based fertitlizer',
     quantity: 53453,
     price: 23.11,
-    image: 'img-5',
+    image:
+      'http://cdn.shopify.com/s/files/1/0569/9675/7697/articles/organic-fertilizer-vs-chemical-fertilizer.jpg?v=1655866623',
     onSale: true,
     categoryId: '2'
   },
@@ -55,7 +60,8 @@ const products = [
     description: 'Outdoor or indoor basketball',
     quantity: 128,
     price: 59.99,
-    image: 'img-6',
+    image:
+      'https://d2560u4h06m0te.cloudfront.net/images/2021/12/29/021321_001_basketball.JPG',
     onSale: true,
     categoryId: '3'
   },
@@ -65,7 +71,8 @@ const products = [
     description: 'Good for golfing',
     quantity: 3,
     price: 427.44,
-    image: 'img-7',
+    image:
+      'https://americanclassicgolf.com/wp-content/uploads/2020/12/shutterstock_382777819-500x300-1.jpg',
     onSale: false,
     categoryId: '3'
   },
@@ -75,7 +82,7 @@ const products = [
     description: 'Professional catcher gloves',
     quantity: 745,
     price: 77.0,
-    image: 'img-8',
+    image: 'https://m.media-amazon.com/images/I/81yDjBHz3-L.jpg',
     onSale: true,
     categoryId: '3'
   },
@@ -85,7 +92,7 @@ const products = [
     description: 'Round ball',
     quantity: 734,
     price: 93.44,
-    image: 'img-9',
+    image: 'https://i.ebayimg.com/images/g/dE8AAOSwXXdjPGFM/s-l640.jpg',
     onSale: false,
     categoryId: '3'
   }
