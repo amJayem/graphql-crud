@@ -1,0 +1,73 @@
+// create
+mutation CreateRecipe($recipeInput: RecipeInput) {
+  createRecipe(recipeInput: $recipeInput) {
+    description
+    name
+  }
+}
+// variables
+{
+  "recipeInput": {
+    "description": "test description 1",
+    "name": "test name"
+  }
+}
+
+----------------------------------
+//edited
+
+mutation EditRecipe($id: ID!, $recipeInput: RecipeInput) {
+  editRecipe(ID: $id, recipeInput: $recipeInput)
+}
+
+//variables
+
+{
+  "id": "6422ae373b5a5b08ffecad8a",
+  "recipeInput": {
+    "name": "test 2",
+    "description": "desc 2"
+  }
+}
+
+----------------------------------------
+//deleted
+
+mutation DeleteRecipe($id: ID!) {
+  deleteRecipe(ID: $id)
+}
+
+//variables
+
+{
+  "id": "6422ae393b5a5b08ffecad8e"
+}
+
+---------------------------------------
+// get one 
+
+query Recipe($id: ID!) {
+  recipe(ID: $id) {
+    name
+    description
+  }
+}
+//variables
+{
+  "id": "6422ae373b5a5b08ffecad8a"
+}
+
+------------------------------------
+// get all by amount
+query GetRecipes($amount: Int) {
+  getRecipes(amount: $amount) {
+    name
+    description
+  }
+}
+
+//variables
+{
+  "amount": 2
+}
+---------------------------------
