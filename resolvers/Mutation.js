@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const Recipe = require('../models/Recipe')
 
 exports.Mutation = {
   addProduct: (parent, args, context) => {
@@ -27,5 +28,32 @@ exports.Mutation = {
     let products = context.db.products
     _.remove(products, (product) => product.id === id)
     return null
+  },
+
+  async createRecipe(_, { recipeInput: { name, description } }) {
+    const createdRecipe = new Recipe({
+      name: name,
+      description: description
+    })
+
+    const res = await createdRecipe.save() // mongodb saving
+
+    return {
+      id: res.id,
+      ...res._doc
+    }
+  },
+  async deleteRecipe(_, { ID }) {
+    const deleted = (await Recipe.deleteOne({ _id: ID })).deletedCount
+    return deleted
+  },
+  async editRecipe(_, { ID, recipeInput: { name, description } }) {
+    const edited = (
+      await Recipe.updateOne(
+        { _id: ID },
+        { name: name, description: description }
+      )
+    ).modifiedCount
+    return edited
   }
 }

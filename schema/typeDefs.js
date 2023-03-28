@@ -4,6 +4,8 @@ exports.typeDefs = gql`
   type Query {
     products: [Products!]!
     product(id: ID!): Products
+    recipe(ID: ID!): Recipe!
+    getRecipes(amount: Int): [Recipe]
   }
 
   type Products {
@@ -31,6 +33,10 @@ exports.typeDefs = gql`
     addProduct(input: AddProduct!): Products
     updateProduct(input: UpdateProduct!): Products
     deleteProduct(id: ID!): Products
+
+    createRecipe(recipeInput: RecipeInput): Recipe!
+    deleteRecipe(ID: ID!): Boolean
+    editRecipe(ID: ID!, recipeInput: RecipeInput): Boolean
   }
 
   input AddProduct {
@@ -43,5 +49,15 @@ exports.typeDefs = gql`
     id: ID!
     newProductName: String!
     newProductPrice: Int!
+  }
+
+  type Recipe {
+    name: String
+    description: String
+  }
+
+  input RecipeInput {
+    name: String
+    description: String
   }
 `
