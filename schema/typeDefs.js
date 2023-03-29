@@ -3,9 +3,15 @@ const { gql } = require('apollo-server')
 exports.typeDefs = gql`
   type Query {
     products: [Products!]!
+    getAllProducts(amount: Int): [Products!]!
     product(id: ID!): Products
     recipe(ID: ID!): Recipe!
     getRecipes(amount: Int): [Recipe]
+  }
+
+  type Recipe {
+    name: String
+    description: String
   }
 
   type Products {
@@ -49,11 +55,6 @@ exports.typeDefs = gql`
     id: ID!
     newProductName: String!
     newProductPrice: Int!
-  }
-
-  type Recipe {
-    name: String
-    description: String
   }
 
   input RecipeInput {
