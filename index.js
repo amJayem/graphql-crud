@@ -6,7 +6,7 @@ const { Products } = require('./resolvers/Products')
 const { Mutation } = require('./resolvers/Mutation')
 const mongoose = require('mongoose')
 
-const uri = `mongodb+srv://user:password@cluster0.42e2srw.mongodb.net/?retryWrites=true&w=majority`
+const uri = `mongodb+srv://graphQL:jYrGHg3HHrb4TCgS@cluster0.42e2srw.mongodb.net/GraphQL?retryWrites=true&w=majority`
 // pass = jYrGHg3HHrb4TCgS
 // user = graphQL
 
